@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiArrowRight, FiShield, FiTrendingUp, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiArrowRight, FiShield, FiTrendingUp } from "react-icons/fi";
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ export default function HeroSection() {
       description: "Connect with passionate supporters worldwide. Fund your creative projects, sustainable causes, and breakthrough tech products securely.",
       primaryAction: { text: "Explore Campaigns", href: "/explore-campaigns" },
       secondaryAction: { text: "Start a Campaign", href: "/dashboard/add-campaign" },
-      stats: { label: "Total Platform Funding", value: "$4.8M+" },
+      stats: { label: "TOTAL PLATFORM FUNDING", value: "$4.8M+" },
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function HeroSection() {
       description: "Support social impact initiatives, community cleanups, and medical relief efforts backed by verified creators and transparent tracking.",
       primaryAction: { text: "Discover Causes", href: "/explore-campaigns?category=Community" },
       secondaryAction: { text: "Join as Supporter", href: "/register" },
-      stats: { label: "Successful Projects", value: "1,250+" },
+      stats: { label: "SUCCESSFUL PROJECTS", value: "1,250+" },
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ export default function HeroSection() {
       description: "Be the first to secure early-bird access to cutting-edge gadgets, indie games, and disruptive hardware inventions directly from creators.",
       primaryAction: { text: "Explore Tech", href: "/explore-campaigns?category=Technology" },
       secondaryAction: { text: "Learn How It Works", href: "/#how-it-works" },
-      stats: { label: "Active Contributors", value: "35,000+" },
+      stats: { label: "ACTIVE CONTRIBUTORS", value: "35,000+" },
     },
   ];
 
@@ -115,9 +115,17 @@ export default function HeroSection() {
 
             </div>
 
-            {/* Right Column: Visual Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
+            {/* Right Column: Visual Card with Up-Down Floating Animation */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="w-full max-w-md"
+              >
                 <div className="rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 shadow-2xl backdrop-blur-xl relative z-10">
                   
                   <div className="flex items-center justify-between mb-6">
@@ -157,7 +165,7 @@ export default function HeroSection() {
                   </div>
 
                 </div>
-              </div>
+              </motion.div>
             </div>
 
           </motion.div>

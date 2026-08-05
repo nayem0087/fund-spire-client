@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="border-t border-slate-200 dark:border-slate-800 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400">
           <p>© {currentYear || "2026"} FundSpire Platform. All rights reserved.</p>
           <p className="flex items-center mt-3 sm:mt-0">
-            Built with <FaHeart className="text-red-500 mx-1" size={12} /> for MERN Stack Project
+            Built with <FaHeart className="text-red-500 mx-1" size={12} /> for Full Stack Project
           </p>
         </div>
 
