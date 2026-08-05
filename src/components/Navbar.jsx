@@ -137,7 +137,7 @@ export default function Navbar() {
 
             {/* Join as Developer Button */}
             <a 
-              href={githubRepoUrl} 
+              href={'https://github.com/nayem0087/fund-spire-client'} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition font-medium text-sm"
