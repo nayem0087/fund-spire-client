@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaHeart } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
 import { RiRefund2Line } from "react-icons/ri";
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState("");
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 pt-16 pb-8 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +105,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-200 dark:border-slate-800 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-          <p>© {new Date().getFullYear()} FundSpire Platform. All rights reserved.</p>
+          <p>© {currentYear || "2026"} FundSpire Platform. All rights reserved.</p>
           <p className="flex items-center mt-3 sm:mt-0">
             Built with <FaHeart className="text-red-500 mx-1" size={12} /> for MERN Stack Project
           </p>
