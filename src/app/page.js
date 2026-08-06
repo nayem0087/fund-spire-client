@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import TopCampaigns from "@/components/TopCampaigns";
 import Testimonials from "@/components/Testimonials";
 import HowItWorks from "@/components/HowItWorks";
+import PlatformImpact from "@/components/PlatformImpact";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <TopCampaigns/>
         <Testimonials/>
         <HowItWorks/>
+        <PlatformImpact/>
+        <WhyChooseUs/>
     </div>
   );
 }
